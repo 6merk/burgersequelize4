@@ -2,10 +2,9 @@ CREATE DATABASE burgers_db;
 
 USE burgers_db;
 
-CREATE TABLE burgers (
-    id  int not null auto_increment,
-	burger_name  varchar(200) not null,
-	devoured boolean default false,
-	ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-	primary key (id)
-);
+CREATE TABLE burgers (id int NOT NULL AUTO_INCREMENT,
+   burger_name VARCHAR(40) NOT NULL,
+   devoured BOOLEAN DEFAULT 0,
+   createdDate TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+   PRIMARY KEY(id)
+ );
